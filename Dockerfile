@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y tightvncserver nodejs npm python3
 COPY . /tmp/app
-RUN npm make-lin
+RUN npm run make-lin
 RUN DEBIAN_FRONTEND=noninteractive apt install -y /tmp/app/out/make/deb/*.deb
 
 WORKDIR /opt/server
