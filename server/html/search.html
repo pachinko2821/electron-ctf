@@ -1,0 +1,6 @@
+<iframe id="frame"></iframe>
+<script>
+    let data = new URL(location).searchParams.get("data")
+    let frame = document.getElementById("frame")
+    frame.src = "http://localhost:8000?footer=" + data
+</script>
